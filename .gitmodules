@@ -10,3 +10,33 @@
 [submodule "roles/nginx"]
 	path = roles/nginx
 	url = git@github.com:bolser/ansible_role_nginx.git
+[submodule "roles/server"]
+	path = roles/server
+	url = git@github.com:bolser/ansible_role_server.git
+[submodule "roles/varnish"]
+	path = roles/varnish
+	url = git@github.com:geerlingguy/ansible-role-varnish.git
+[submodule "roles/unattended-upgrades"]
+	path = roles/unattended-upgrades
+	url = git@github.com:RealSalmon/ansible-unattended-upgrades.git
+[submodule "roles/composer"]
+	path = roles/composer
+	url = git@github.com:bolser/ansible_role_composer.git
+[submodule "roles/ntp"]
+	path = roles/ntp
+	url = git@github.com:bolser/ansible_role_ntp.git
+[submodule "roles/elasticsearch"]
+	path = roles/elasticsearch
+	url = git@github.com:bolser/ansible_role_elasticsearch.git
+[submodule "roles/selenium"]
+	path = roles/selenium
+	url = git@github.com:bolser/ansible_role_selenium.git
+[submodule "roles/supservisor"]
+	path = roles/supservisor
+	url = git@github.com:bolser/ansible_role_supervisor.git
+[submodule "roles/deploy"]
+	path = roles/deploy
+	url = git@github.com:bolser/ansible_role_deploy.git
+[submodule "roles/apache"]
+	path = roles/apache
+	url = git@github.com:bolser/ansible_role_apache.git
