@@ -1,0 +1,3 @@
+# In this file you place variables that will applie to all hosts in the inventory file.
+# Therefore, variables set in this file are shared across vagrant, develop, staging and production
+---

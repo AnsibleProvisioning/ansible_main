@@ -1,0 +1,8 @@
+# This is where you can and should list out all the servers that belong to an environment
+# The name within [brackets] like so correlates to the automatically loaded variables file within group_vars
+# such that, [vagrant] will automatically load the group_vars/vagrant.yml file
+[local]
+localhost
+
+[vagrant]
+192.168.22.124

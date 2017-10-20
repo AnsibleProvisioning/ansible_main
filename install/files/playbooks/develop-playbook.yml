@@ -1,0 +1,11 @@
+---
+- hosts: vagrant
+  become: true
+  vars:
+      - env: vagrant
+  roles:
+      - { role: ansible/roles/vagrant }
+      - { role: ansible/roles/php }
+      - { role: ansible/roles/nginx }
+      - { role: ansible/roles/database }
+      - { role: ansible/roles/app }

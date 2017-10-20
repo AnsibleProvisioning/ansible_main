@@ -1,0 +1,43 @@
+# This is your vagrant environment config
+---
+vagrant:
+    vm:
+        base_box: ubuntu/xenial64               # Required
+        base_box_osx: geerlingguy/ubuntu1604    # Optional
+        base_box_win: someuser/anotherbox       # Optional
+        box_user: ubuntu                        # Required
+        hostname: awesome.dev                   # Required
+        ip: 192.168.22.124                      # Required
+        memory: '2048'                          # Required, measured in megabytes
+        cpus: '2'                               # Required, number of CPU cores
+    synced_folders:                             # At least one is required
+        1: { source: ./, target: /var/www/awesome.dev }
+server:
+    packages:
+        - pngquant
+        - jpegoptim
+        - optipng
+        - gifsicle
+        - pngcrush
+        - libjpeg-progs
+        - graphicsmagick
+    timezone:
+        install: true
+        data: Europe/London
+    locale: en_GB.UTF-8
+nginx:
+    install: true
+    doc_root: /var/www/awesome.dev
+    server_name: awesome.dev
+    index: index.php
+    template: "{{ templates_dir }}/nginx-template.conf"
+    client_max_body_size: 1m
+mariadb:
+    install: true
+    root_password: 123
+    database: awesome
+    user: awesome.dev
+    password: 123
+    dump: ''
+ppa_mariadb_install: true
+ppa_php_install: true

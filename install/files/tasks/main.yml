@@ -1,0 +1,3 @@
+# This file is executed by the App role if included in your playbook roles
+# You can use this file and folder to create manual tasks that are not covered in the roles or are specific to a particular project
+---
