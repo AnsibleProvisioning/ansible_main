@@ -1,6 +1,6 @@
 ---
 # In here can go custom commands that need to be run per project that are unique
-- include: "{{ item }}"
+- include_tasks: "{{ item }}"
   with_first_found:
     - files:
         - "{{ config_dir }}/tasks/main.yml"
