@@ -3,21 +3,21 @@
 source "$(dirname "$0")/source.sh"
 
 linkVagrantfile() {
-    rm -f Vagrantfile
-    ln -s ansible-config/Vagrantfile Vagrantfile
+    rm -f "$PROJECT_DIR"/Vagrantfile
+    ln -s "$ANSIBLE_DIR"/Vagrantfile "$PROJECT_DIR"/Vagrantfile
 }
 
 copyFiles() {
     if [ ! -e "$ANSIBLE_CONFIG" ]; then
         mkdir -p "$ANSIBLE_CONFIG"
-        cp -R "$FILES_DIR"/install/* "$ANSIBLE_CONFIG"/
-        mv "$ANSIBLE_CONFIG"/inventories/inventory.yml.dist "$ANSIBLE_CONFIG"/inventory.yml.dist
+        cp -R "$ANSIBLE_DIR"/install/files/* "$ANSIBLE_CONFIG"/
+        mv "$ANSIBLE_CONFIG"/inventories/inventory.yml "$ANSIBLE_CONFIG"/inventory.yml
         rm -r "$ANSIBLE_CONFIG"/inventories
-    else
-        cp "$FILES_DIR"/install/Vagrantfile "$ANSIBLE_CONFIG"/Vagrantfile
     fi
+
+    cp "$ANSIBLE_DIR"/Vagrantfile "$ANSIBLE_CONFIG"/Vagrantfile
 }
 
 cd "$PROJECT_DIR"
-linkVagrantfile
 copyFiles
+linkVagrantfile
