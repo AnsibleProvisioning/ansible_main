@@ -1,0 +1,11 @@
+---
+vagrant:
+    vm:
+        base_box: ubuntu/xenial64               # Required
+        box_user: ubuntu                        # Required
+        hostname: example.dev                   # Required
+        ip: 192.168.22.124                      # Required
+        memory: '2048'                          # Required, measured in megabytes
+        cpus: '2'                               # Required, number of CPU cores
+    synced_folders:                             # At least one is required
+        1: { source: ./, target: /var/www/example.dev }
