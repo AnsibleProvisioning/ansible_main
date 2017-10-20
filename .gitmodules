@@ -1,0 +1,12 @@
+[submodule "libraries/mountopts"]
+	path = libraries/mountopts
+	url = git@github.com:Uberspace/ansible-mountopts.git
+[submodule "roles/php"]
+	path = roles/php
+	url = git@github.com:bolser/ansible_role_php.git
+[submodule "roles/database"]
+	path = roles/database
+	url = git@github.com:bolser/ansible_role_database.git
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = git@github.com:bolser/ansible_role_nginx.git
