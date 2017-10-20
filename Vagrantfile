@@ -47,6 +47,7 @@ Vagrant.configure("2") do |config|
         ansible.playbook = "ansible-config/playbooks/vagrant-playbook.yml"  # Playbook
         ansible.inventory_path = "ansible-config/inventory.yml"             # Inventory
         ansible.limit = 'all'                                               # Ansible limit groups
+        ansible.extra_vars = "ansible/facts.json"
     end
 
     # Sync folders on the host machine into the guest machine using NFS

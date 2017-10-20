@@ -1,0 +1,16 @@
+{
+  "project_dir" : "{{ playbook_dir }}/../../",
+  "config_dir" : "{{ project_dir }}/ansible-config",
+  "ansible_dir" : "{{ project_dir }}/ansible",
+  "files_dir" : "{{ config_dir}}/files",
+  "templates_dir" : "{{ config_dir}}/templates",
+  "tasks_dir" : "{{ config_dir}}/tasks",
+  "binaries" : [
+    {
+      "php" : "/usr/bin/php",
+      "mysql" : "/usr/bin/mysql",
+      "composer" : "/usr/local/bin/composer",
+      "java" : "/usr/bin/java"
+    }
+  ]
+}
