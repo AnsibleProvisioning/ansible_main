@@ -24,3 +24,9 @@ server_ntp_servers:
     - 1.europe.pool.ntp.org
     - 2.europe.pool.ntp.org
     - 3.europe.pool.ntp.org
+
+php_version: 7.1 # 5.5, 5.6, 7.0, 7.1
+php_packages:
+    - curl
+    - xml
+php_pecl_packages: []
