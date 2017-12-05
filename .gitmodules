@@ -1,3 +1,7 @@
 [submodule "libraries/mountopts"]
 	path = libraries/mountopts
 	url = git@github.com:Uberspace/ansible-mountopts.git
+[submodule "roles/server"]
+	path = roles/server
+	url = git@github.com:AnsibleProvisioning/ansible_role_server.git
+	branch = master

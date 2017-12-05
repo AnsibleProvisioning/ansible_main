@@ -12,32 +12,15 @@ vagrant:
         cpus: '2'                               # Required, number of CPU cores
     synced_folders:                             # At least one is required
         1: { source: ./, target: /var/www/awesome.dev }
-server:
-    packages:
-        - pngquant
-        - jpegoptim
-        - optipng
-        - gifsicle
-        - pngcrush
-        - libjpeg-progs
-        - graphicsmagick
-    timezone:
-        install: true
-        data: Europe/London
-    locale: en_GB.UTF-8
-nginx:
-    install: true
-    doc_root: /var/www/awesome.dev
-    server_name: awesome.dev
-    index: index.php
-    template: "{{ templates_dir }}/nginx-template.conf"
-    client_max_body_size: 1m
-mariadb:
-    install: true
-    root_password: 123
-    database: awesome
-    user: awesome.dev
-    password: 123
-    dump: ''
-ppa_mariadb_install: true
-ppa_php_install: true
+
+server_timezone: Europe/London
+server_locale: en_GB.UTF-8
+server_packages:
+    - zip
+    - curl
+    - unzip
+server_ntp_servers:
+    - 0.europe.pool.ntp.org
+    - 1.europe.pool.ntp.org
+    - 2.europe.pool.ntp.org
+    - 3.europe.pool.ntp.org
