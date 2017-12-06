@@ -9,3 +9,7 @@
 	path = roles/php
 	url = git@github.com:AnsibleProvisioning/ansible_role_php.git
 	branch = master
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = git@github.com:AnsibleProvisioning/ansible_role_nginx.git
+	branch = master
