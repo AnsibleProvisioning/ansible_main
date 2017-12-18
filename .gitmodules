@@ -17,3 +17,7 @@
 	path = roles/deployment
 	url = git@github.com:AnsibleProvisioning/ansible_role_deployment.git
 	branch = master
+[submodule "roles/database"]
+	path = roles/database
+	url = git@github.com:AnsibleProvisioning/ansible_role_database.git
+	branch = master
