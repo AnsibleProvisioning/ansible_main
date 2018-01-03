@@ -13,7 +13,7 @@ data = configValues['vagrant']
 Vagrant.require_version '>= 2.0.0'
 
 # Require these plugins to be installed
-required_plugins = %w( vagrant-bindfs )                                          #  Plugin names, space separated list
+required_plugins = %w( vagrant-bindfs vagrant-hostsupdater )                                          #  Plugin names, space separated list
 required_plugins.each do |plugin|
   system "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin    # Install missing plugins
 end
@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
     config.ssh.forward_agent = true                                     # SSH forwarding
     config.vm.define :"#{data['vm']['hostname']}" do |t|                # Set the hostname of the server
     end
+    # Update the hosts file on the host computer with this entry
+    config.vm.hostname = "#{data['vm']['hostname']}"
 
     # Configure VirtualBox
     config.vm.provider :virtualbox do |vb|
