@@ -7,7 +7,7 @@ This project is designed to be used as a Git Submodule.
 
 Perform the following commands from the root of your project directory
 ```bash
-git submodule add -b master git@github.com:bolser/ansible_v2.git ansible
+git submodule add -b master git@github.com:AnsibleProvisioning/ansible_main.git ansible
 git submodule update --init --recursive
 ```
 
